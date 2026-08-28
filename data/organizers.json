@@ -1,0 +1,118 @@
+{
+  "organizers": [
+    {
+      "name": "Organizer One",
+      "affiliation": "Affiliation TBD",
+      "website": "#",
+      "links": [
+        {
+          "label": "Bluesky",
+          "url": "#"
+        },
+        {
+          "label": "Google Scholar",
+          "url": "#"
+        },
+        {
+          "label": "GitHub",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "name": "Organizer Two",
+      "affiliation": "Affiliation TBD",
+      "website": "#",
+      "links": [
+        {
+          "label": "Bluesky",
+          "url": "#"
+        },
+        {
+          "label": "Google Scholar",
+          "url": "#"
+        },
+        {
+          "label": "GitHub",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "name": "Organizer Three",
+      "affiliation": "Affiliation TBD",
+      "website": "#",
+      "links": [
+        {
+          "label": "Bluesky",
+          "url": "#"
+        },
+        {
+          "label": "Google Scholar",
+          "url": "#"
+        },
+        {
+          "label": "GitHub",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "name": "Organizer Four",
+      "affiliation": "Affiliation TBD",
+      "website": "#",
+      "links": [
+        {
+          "label": "Bluesky",
+          "url": "#"
+        },
+        {
+          "label": "Google Scholar",
+          "url": "#"
+        },
+        {
+          "label": "GitHub",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "name": "Organizer Five",
+      "affiliation": "Affiliation TBD",
+      "website": "#",
+      "links": [
+        {
+          "label": "Bluesky",
+          "url": "#"
+        },
+        {
+          "label": "Google Scholar",
+          "url": "#"
+        },
+        {
+          "label": "GitHub",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "name": "Organizer Six",
+      "affiliation": "Affiliation TBD",
+      "website": "#",
+      "links": [
+        {
+          "label": "Bluesky",
+          "url": "#"
+        },
+        {
+          "label": "Google Scholar",
+          "url": "#"
+        },
+        {
+          "label": "GitHub",
+          "url": "#"
+        }
+      ]
+    }
+  ]
+}

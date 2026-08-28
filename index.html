@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A2S2 — a workshop on the AI Auditing of Sociotechnical Systems, bringing together researchers, practitioners, and communities who study AI and algorithmic systems as they are actually deployed.">
+  <title>A2S2 Workshop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-brand">A2S2</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#editions">Editions</a></li>
+      <li><a href="#organizers">Organizers</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero page-col">
+    <h1 class="hero-acronym">A<sup>2</sup>S<sup>2</sup></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-subtitle"><span class="hero-word"><span class="hero-letter" style="--hop-delay:0s">A</span>I</span> <span class="hero-word"><span class="hero-letter" style="--hop-delay:0.09s">A</span>uditing</span> of <span class="hero-word"><span class="hero-letter" style="--hop-delay:0.18s">S</span>ociotechnical</span> <span class="hero-word"><span class="hero-letter" style="--hop-delay:0.27s">S</span>ystems</span></p>
+    <p class="hero-tagline">A community for people who study AI and algorithmic systems as they are actually built, deployed, and lived with &mdash; including those doing this work without calling it auditing.</p>
+  </header>
+
+  <div class="content page-col">
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="prose">
+        <p>
+          A2S2 brings together researchers, practitioners, and affected communities working on the auditing of sociotechnical systems. Our interest is not in models on their own, but in how AI and algorithmic systems are integrated into products, platforms, organizations, and institutions &mdash; and in what it takes to hold those assembled systems accountable. That framing is deliberate: auditing questions look very different once you account for the interfaces, incentives, data pipelines, and human decisions that surround a model.
+        </p>
+        <p>
+          The workshop is a blend of academic and practitioner perspectives, and is explicitly <em>not</em> limited to language models. We want to reach people doing auditing under other names &mdash; AI assurance, independent verification, evaluation, red-teaming, compliance testing, investigative reporting &mdash; alongside the researchers building the methods. Recurring concerns include how audit data is obtained, accessed, or generated; who is empowered to audit and on whose behalf; and what audits are actually able to change.
+        </p>
+      </div>
+    </section>
+
+    <section id="editions">
+      <h2>Editions</h2>
+      <div class="editions-table" role="table" aria-label="Workshop editions">
+        <div role="rowgroup">
+          <div class="editions-row editions-header" role="row">
+            <span role="columnheader">Year</span>
+            <span role="columnheader">Conference</span>
+            <span role="columnheader">Location</span>
+          </div>
+        </div>
+        <div role="rowgroup" id="editions-tbody"></div>
+      </div>
+    </section>
+
+    <section id="organizers">
+      <h2>Organizers</h2>
+      <ul class="org-list" id="org-list"></ul>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; A2S2 Workshop Organizers
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
