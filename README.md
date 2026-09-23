@@ -58,9 +58,3 @@ you change theming, copy the file across so the editions do not drift apart.
   `Mastodon`, `LinkedIn`, `GitHub`, `Google Scholar`, `ORCID`. **Any other
   label is silently dropped**, so add the icon first.
 
-## TODO
-
-`data/organizers.json` currently holds six placeholders (`Organizer One`
-… `Organizer Six`). For each, replace `name`, `affiliation`, `website`, and
-every `links[].url` — all of which are currently `#`. Delete any social link
-an organizer does not have rather than leaving it as `#`.
