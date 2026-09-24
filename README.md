@@ -1,6 +1,6 @@
 # a2s2-workshop
 
-Landing site for **A²S² — AI Auditing of Sociotechnical Systems**, a workshop
+Landing site for **A²S² — Auditing AI and Sociotechnical Systems**, a workshop
 series on auditing AI and algorithmic systems as they are actually built,
 deployed, and lived with.
 
