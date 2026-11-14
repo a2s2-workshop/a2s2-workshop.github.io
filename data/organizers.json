@@ -111,8 +111,23 @@
       ]
     },
     {
+      "name": "Deb Raji",
+      "affiliation": "Institute for Advanced Study, USA",
+      "website": "https://rajiinio.github.io/",
+      "links": [
+        {
+          "label": "Google Scholar",
+          "url": "https://scholar.google.com/citations?user=pzw1-J4AAAAJ"
+        },
+        {
+          "label": "ORCID",
+          "url": "https://orcid.org/0000-0002-9510-3015"
+        }
+      ]
+    },
+    {
       "name": "Bogdana Rakova",
-      "affiliation": "DLA Piper",
+      "affiliation": "Data & Society Research Institute, USA",
       "website": "https://bobirakova.com/",
       "links": [
         {
@@ -126,6 +141,21 @@
         {
           "label": "X",
           "url": "https://twitter.com/bobirakova"
+        }
+      ]
+    },
+    {
+      "name": "Ronald E. Robertson",
+      "affiliation": "Stanford University, USA",
+      "website": "https://ronalderobertson.com/",
+      "links": [
+        {
+          "label": "Google Scholar",
+          "url": "https://scholar.google.com/citations?user=tyTlG34AAAAJ"
+        },
+        {
+          "label": "ORCID",
+          "url": "https://orcid.org/0000-0003-4525-5050"
         }
       ]
     },
