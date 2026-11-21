@@ -354,6 +354,7 @@ tbody tr:hover { background: var(--color-row-hover); }
   border-bottom: 1px solid var(--color-border);
   text-decoration: none;
   color: inherit;
+  position: relative;
 }
 
 .editions-header {
@@ -363,13 +364,33 @@ tbody tr:hover { background: var(--color-row-hover); }
   color: var(--color-text-subtle);
 }
 
-a.editions-row:hover { background: var(--color-row-hover); }
+.editions-row:has(.editions-link):hover { background: var(--color-row-hover); }
 
-a.editions-row .editions-year {
+.editions-year {
   font-family: var(--font-display);
   font-weight: 500;
   color: var(--color-accent-warm);
 }
+
+/* The year link is stretched over its row so the whole row is clickable. */
+.editions-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.editions-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.editions-link:focus-visible { outline: none; }
+.editions-link:focus-visible::after {
+  outline: 2px solid var(--color-accent-warm);
+  outline-offset: -2px;
+}
+
+.editions-error { grid-column: 1 / -1; }
 
 /* ---------- ORGANIZERS: card grid (year sites) ---------- */
 

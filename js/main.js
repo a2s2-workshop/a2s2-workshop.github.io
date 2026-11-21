@@ -22,11 +22,16 @@ async function fetchJSON(url) {
   return res.json();
 }
 
+/* Everything from data/*.json goes through esc() before it reaches innerHTML,
+   so a name or affiliation containing &, <, or a quote cannot break the markup. */
+const ESC_MAP = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ESC_MAP[c]);
+
 function iconsFor(links) {
   return (links || []).reduce((html, l) => {
     const icon = ICONS[l.label];
     return icon && l.url
-      ? html + `<a href="${l.url}" class="org-icon" ${EXT_LINK} title="${l.label}">${icon}</a>`
+      ? html + `<a href="${esc(l.url)}" class="org-icon" ${EXT_LINK} title="${esc(l.label)}">${icon}</a>`
       : html;
   }, '');
 }
@@ -35,14 +40,23 @@ async function loadEditions() {
   const tbody = document.getElementById('editions-tbody');
   try {
     const { editions } = await fetchJSON('data/editions.json');
-    tbody.innerHTML = editions.map(e => `
-      <a class="editions-row" role="row" href="${e.url}" ${EXT_LINK}>
-        <span class="editions-year" role="cell">${e.year}</span>
-        <span role="cell">${e.conference}</span>
-        <span class="editions-location" role="cell">${e.location}</span>
-      </a>`).join('');
+    /* The link lives inside the year cell and is stretched over the whole row
+       in CSS, so the row stays a real table row for assistive tech. A missing
+       field shows as TBD, and an edition without a url renders unlinked. */
+    tbody.innerHTML = editions.map(e => {
+      const year = esc(e.year) || 'TBD';
+      const yearHtml = e.url
+        ? `<a class="editions-link" href="${esc(e.url)}" ${EXT_LINK}>${year}</a>`
+        : year;
+      return `
+      <div class="editions-row" role="row">
+        <span class="editions-year" role="cell">${yearHtml}</span>
+        <span role="cell">${esc(e.conference) || 'TBD'}</span>
+        <span class="editions-location" role="cell">${esc(e.location) || 'TBD'}</span>
+      </div>`;
+    }).join('');
   } catch {
-    tbody.innerHTML = '<p class="data-error">Could not load edition data.</p>';
+    tbody.innerHTML = '<div class="editions-row" role="row"><span class="data-error editions-error" role="cell">Could not load edition data.</span></div>';
   }
 }
 
@@ -52,17 +66,17 @@ async function loadOrganizers() {
     const { organizers } = await fetchJSON('data/organizers.json');
     list.innerHTML = organizers.map(org => {
       const nameHtml = org.website
-        ? `<a href="${org.website}" class="org-item-name" ${EXT_LINK}>${org.name}</a>`
-        : `<span class="org-item-name">${org.name}</span>`;
+        ? `<a href="${esc(org.website)}" class="org-item-name" ${EXT_LINK}>${esc(org.name)}</a>`
+        : `<span class="org-item-name">${esc(org.name)}</span>`;
       const icons = iconsFor(org.links);
       return `<li class="org-item">
         ${nameHtml}
-        <span class="org-item-affil">${org.affiliation}</span>
+        <span class="org-item-affil">${esc(org.affiliation)}</span>
         ${icons ? `<span class="org-card-icons">${icons}</span>` : ''}
       </li>`;
     }).join('');
   } catch {
-    list.innerHTML = '<p class="data-error">Could not load organizer data.</p>';
+    list.innerHTML = '<li class="data-error">Could not load organizer data.</li>';
   }
 }
 
